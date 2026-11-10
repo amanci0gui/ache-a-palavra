@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f3efe5" />
+    <title>Termo Local | Palavra em Jogo</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#inicio" aria-label="Palavra em Jogo, início">
+        <span class="brand-mark" aria-hidden="true">P.</span>
+        <span class="brand-name">PALAVRA<br />EM JOGO</span>
+      </a>
+      <button class="new-game-button" id="new-game" type="button">
+        <span aria-hidden="true">↻</span>
+        Nova partida
+      </button>
+    </header>
+
+    <main class="game-layout" id="inicio">
+      <section class="game-panel" aria-labelledby="game-title">
+        <div class="game-heading">
+          <div>
+            <p class="eyebrow">DESAFIO LOCAL <span>•</span> 6 TENTATIVAS</p>
+            <h1 id="game-title">Encontre a palavra.</h1>
+          </div>
+          <div class="letter-stamp" aria-hidden="true"><span>5</span><small>LETRAS</small></div>
+        </div>
+
+        <p class="game-message" id="game-message" role="status" aria-live="polite" aria-atomic="true">
+          Digite uma palavra e pressione enviar.
+        </p>
+
+        <div class="board" id="board" role="grid" aria-label="Tabuleiro com seis tentativas" data-active-row="0"></div>
+
+        <div class="keyboard" id="keyboard" role="group" aria-label="Teclado virtual"></div>
+      </section>
+
+      <aside class="guide-panel" aria-labelledby="guide-title">
+        <div class="guide-topline"><span class="guide-number">01</span><span class="guide-rule"></span></div>
+        <h2 id="guide-title">Como jogar</h2>
+        <p>Descubra a palavra escondida antes de acabar suas tentativas.</p>
+
+        <ul class="legend-list" aria-label="Significado das cores">
+          <li>
+            <span class="legend-swatch legend-swatch--correct" aria-hidden="true">A</span>
+            <span><strong>Na medida</strong><small>Letra certa, lugar certo.</small></span>
+          </li>
+          <li>
+            <span class="legend-swatch legend-swatch--present" aria-hidden="true">A</span>
+            <span><strong>Quase lá</strong><small>A letra existe em outro lugar.</small></span>
+          </li>
+          <li>
+            <span class="legend-swatch legend-swatch--absent" aria-hidden="true">A</span>
+            <span><strong>Fora da palavra</strong><small>Essa letra não aparece.</small></span>
+          </li>
+        </ul>
+
+        <p class="guide-footnote">Palpites precisam ser palavras válidas de cinco letras.</p>
+      </aside>
+    </main>
+
+    <footer class="site-footer">
+      <span>PALAVRA EM JOGO</span>
+      <span>Jogue direto no navegador</span>
+    </footer>
+  </body>
+</html>
